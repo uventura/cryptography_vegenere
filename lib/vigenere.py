@@ -63,6 +63,7 @@ class Vigenere:
 
     def encrypt(self, msg, key):
         encrypted_text = list(self._normalize_message(msg))
+        key = self._normalize_message(key)
 
         for index, letter in enumerate(encrypted_text):
             shift_amount = ord(key[index%len(key)])
