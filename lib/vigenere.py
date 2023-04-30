@@ -73,7 +73,7 @@ class Vigenere:
             new_value = chr(ord('a') + (ord(letter)+shift_amount-2*ord('a')) % 26)
             encrypted_text[index] = new_value
             index_key += 1
-        print(encrypted_text)
+
         return ''.join(encrypted_text)
 
     def decrypt(self, msg, key):
