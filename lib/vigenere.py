@@ -78,4 +78,21 @@ class Vigenere:
 
     def decrypt(self, msg, key):
         encrypted_text = list(msg)
+        decrypted_text = ""
+        index_key = 0
 
+        for index, letter in enumerate(encrypted_text):
+            if letter == " ":
+                decrypted_text += " "
+                continue
+            shift_amount = ord(key[index_key%len(key)])
+
+            diff_l1 = ord(letter) - ord('a')
+            diff_l2 = shift_amount - ord('a')
+
+            new_value = chr(ord('a') + ((diff_l1 - diff_l2)%26))
+
+            decrypted_text += new_value
+            index_key += 1
+
+        return decrypted_text
