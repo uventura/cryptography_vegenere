@@ -55,7 +55,7 @@ class Vigenere:
             for accented_letter in accented_letters[letter]:
                 msg = msg.replace(accented_letter, letter)
 
-        pontuations = ":;.,<>+-=)(*&%$#@!^?|\\//[]\{\} "
+        pontuations = ":;.,<>+-=)(*&%$#@!^?|\\//[]\{\}\"'"
         for pontuation in pontuations:
             msg = msg.replace(pontuation, "")
 
@@ -64,13 +64,18 @@ class Vigenere:
     def encrypt(self, msg, key):
         encrypted_text = list(self._normalize_message(msg))
         key = self._normalize_message(key)
+        index_key = 0
 
         for index, letter in enumerate(encrypted_text):
-            shift_amount = ord(key[index%len(key)])
+            if letter == " ":
+                continue
+            shift_amount = ord(key[index_key%len(key)])
             new_value = chr(ord('a') + (ord(letter)+shift_amount-2*ord('a')) % 26)
             encrypted_text[index] = new_value
-
+            index_key += 1
+        print(encrypted_text)
         return ''.join(encrypted_text)
 
-    def decrypt(self, msg):
-        pass
+    def decrypt(self, msg, key):
+        encrypted_text = list(msg)
+

@@ -21,7 +21,7 @@ class TestVigenere(unittest.TestCase):
 
     def test_word_encryption(self):
         encrypted_letter = self.vigenere.encrypt("hello, world!", "mykey")
-        self.assertEqual(encrypted_letter, "tcvpmimbpb")
+        self.assertEqual(encrypted_letter, "tcvpm imbpb")
 
 if __name__ == "__main__":
     unittest.main()
