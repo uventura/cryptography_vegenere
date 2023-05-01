@@ -1,8 +1,4 @@
 class Vigenere:
-    def __init__(self, language = "en"):
-        self.language = language
-        self.language_frequences = self._get_frequences()
-
     def normalize_message(self, msg):
         # Looking the definition here:
         #   https://en.wikipedia.org/wiki/VigenC3A8re_cipher
