@@ -21,7 +21,7 @@ class Vigenere:
             for accented_letter in accented_letters[letter]:
                 msg = msg.replace(accented_letter, letter)
 
-        msg = msg.replace("'", " ")
+        msg = msg.replace("'", " ").replace("\n", " ")
         correct_sentence = ""
         accepted_characters = "abcdefghijklmnopqrstuvwxyz "
         for letter in msg:
