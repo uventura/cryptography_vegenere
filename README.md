@@ -13,7 +13,7 @@ To use the main program, please type:
 python3 main.py
 ```
 
-Also, you have some examples in `examples` directory, and type:
+Also, you have some examples in `examples` directory, to run type:
 ```
 python3 examples/example01.py
 ```
