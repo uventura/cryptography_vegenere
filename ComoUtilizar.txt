@@ -1,0 +1,14 @@
+Para utilizar o sistema principal:
+```
+python3 main.py
+```
+
+Para executar o primeiro desafio:
+```
+python3 examples/example01.py
+```
+
+Para executar o segundo desafio:
+```
+python3 examples/example02.py
+```
