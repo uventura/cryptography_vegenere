@@ -17,7 +17,7 @@ class ExampleModel:
         self.vigenere = Vigenere()
         self.vigenere_attack = VigenereAttack()
         self.cypher_txt = self.vigenere.normalize_message(
-            open(test_path + "/" + cypher_txt, "r").read()
+            open(test_path + "/" + cypher_txt, "r", encoding="utf8").read()
         )
         self.language = language
 
